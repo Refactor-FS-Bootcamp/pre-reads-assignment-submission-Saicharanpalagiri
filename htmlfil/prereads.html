@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="results.html" method="get"enctype="multipart/form-data">
+        <h2 style="color:green">Personal Information</h2>
+      
+
+        <label style="color:blue;" for="fname">First Name:</label>
+        <input id="fname" type="text" name="First Name" placeholder="Enter your first name">
+        <br>
+        <br>
+
+        <label style="color:blue;"for="ln">Last name:</label>
+        <input id="ln"type="text"name="Second Name"placeholder="Enter your last name">
+        <br><br>
+
+           <label style="color:red"> Enter your Gender:</label>
+        <div>    
+            <input type="radio" id="male" name="Gender" value="male">
+            <label style="color:blue;" for="male">male</label>
+        </div>
+           
+            <input id="female" name="Gender" type="radio"value="female">
+            <label style="color:blue;" for="female">female</label>
+            <br><br>
+
+            <div class="form-control">
+                <label style="color:red;" class="header"for="image">Profile Photo:</label>
+                
+                <input id="image" type="file" name="profile_photo" placeholder="Photo"  capture>
+            </div>
+            <br>
+            <div style="color:red;">
+            Biodata :<br>
+            <textarea name="textarea" id="uvw" cols="30" rows="5"placeholder="Tell me about yourself"></textarea>
+            </div>
+            <br>
+
+            <label style="color:red;" for="xyz">Select Country:</label>
+            <select name="country" id="xyz">
+                <option value="india">India</option>
+                <option value="pakistan">Pakistan</option>
+                <option value="america">America</option>
+                <option value="africa">Africa</option>
+            </select>
+            <br><br>
+        </div>
+            <input style="background-color: tomato ; color:white; margin-right: 16px"; type="reset">
+            <input  type="submit" style="background-color: tomato;color:white; margin-right: 16px">
+        </div>
+    </form>
+    
+</body>
+</html>
