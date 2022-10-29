@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>replit</title>
+  <link rel="stylesheet" href="/pre-reads-assignment-submission-Saicharanpalagiri/NotesAssign/style1.css" type="text/css">
+
+</head>
+
+<body>
+
+  <header>
+    <center>
+      <h1>Notes!</h1>
+      <div class="container">
+
+
+        <form>
+          <input type="text" id="header-title" placeholder="Title">
+          <textarea name="" id="header-text" placeholder="Note-content"></textarea>
+          <div class="bt">
+          <button id="add-btn">Add Note</button>
+          </div>
+        </form>
+      </div>
+    </center>
+  </header>
+<section>
+  <div class="container sec">
+    <h1 style="color:white">Your Notes</h1> 
+    <hr>
+    
+    <div id="notes">
+      <div id="note" class="">
+        <div class="note1">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+ 
+  <script>let submit=document.querySelector("#add-btn");
+    let notesElem=document.querySelector('.note1');
+    let title=document.getElementById("header-title");
+    let desc=document.getElementById('header-text');
+    let notes=JSON.parse(localStorage.getItem("notes"));
+    let index=1;
+    if(notes){
+      notes.forEach(ele=>{
+        addNotes(ele);
+      })
+    }
+    submit.addEventListener("click",(e) =>{
+      e.preventDefault();
+      addNotes();
+    });
+    
+    function addNotes(obj){
+      let card=document.createElement("div");
+      card.classList.add("card");
+      let titleVal=title.value;
+      let descVal=desc.value;
+      if(obj){
+        titleVal=obj.text,
+        descVal=obj.value
+      }
+      if(titleVal=="" || descVal==""){
+        return alert("Add title and note-content to add a note");
+      }
+      if(titleVal){
+        card.innerHTML=`<p class="note-counter" >Note ${index++}</p><h2 class="note-title" style="color:#4f6ee8"> ${titleVal} </h2><p class="note-text" style="color:red"> ${descVal}</p><button class="del" id="${index}"onclick="deleteNote(this.id)" class="note-btn del">Delete Note</button><button id="${index}" onclick="editNote(this.id)" class="note-btn edit-btn edit">Edit Note</button></div>`;
+        notesElem.appendChild(card);
+        updateLs();
+        document.getElementById("header-title").value=""
+          document.getElementById("header-text").value=""
+    
+      }
+      let del=card.querySelector(".del");
+      del.addEventListener("click",()=>{
+        let a=confirm("Do you want to delete the note?")
+        if(a){ card.remove();
+        updateLs();}
+       
+      })
+      let edit=card.querySelector(".edit");
+      edit.addEventListener("click",()=>{
+       console.log(card.children[1].innerText,card.children[2].innerText)
+        //document.write(card.children[0].innerText)
+        if(document.getElementById('header-title').value !=="" || document.getElementById('header-text').value!==""){
+              return alert("clear the values before editing")
+            }
+    document.getElementById("header-title").value=card.children[1].innerText
+          document.getElementById("header-text").value=card.children[2].innerText
+        card.remove();
+        updateLs();
+      });
+      }
+    function updateLs(){
+      let card=document.querySelectorAll(".card");
+      let arr=[];
+      card.forEach(element =>{
+        arr.push({
+          text:element.children[1].innerText,
+          value:element.children[2].innerText
+        })
+      });
+      localStorage.setItem("notes",JSON.stringify(arr));
+      
+    }
+    </script>
+</body>
+
+</html>

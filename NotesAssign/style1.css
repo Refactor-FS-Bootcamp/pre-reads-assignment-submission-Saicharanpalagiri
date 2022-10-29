@@ -1,0 +1,110 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    background-image: url(https://img.freepik.com/free-vector/abstract-low-poly-orange-yellow-background_1017-32111.jpg?w=1060&t=st=1666860268~exp=1666860868~hmac=f2f06de0c9a62dae9ed7b5b67b0fc0006614d5f422b0fd805d58fdad40d9a617);
+    background-color:#88ABFF;
+  }
+  
+  header form{
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;  
+  }
+  header{
+    margin-top:10px;
+    width:100%;
+    
+    align-items: center;
+  }
+  .notes{
+    background-color: white;
+  }
+  
+   header h1{
+    margin-top:5px;
+    color: darkred;
+    
+    font-size:3rem;
+     margin-bottom:4px;
+  }
+  form{
+    border:none;
+    padding:15px;
+    background-color: #4f6ee8;
+    border-radius: 8px;
+  }
+  form>*{
+    margin-bottom:8px;
+    border:1px solid #777;
+    border-radius:3px;
+    font-size:1.2rem;
+    padding:7px;
+    
+  }
+  form textarea{
+    padding: 7px 0 40px 5px ;
+    font-size:1.2rem;
+  }
+  .note-btn{
+    padding:8px;
+    margin-top:5px;
+    font-size: 1rem;
+   background-color: #06e50a;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    border-radius:3px;
+    
+  }
+  .note-btn:hover{
+    background-color:#4f6ee8 ;
+  }
+  .card{
+    padding:2rem;
+    background-color: #fff;
+    border-radius:3px;
+    
+    outline:3px solid greenyellow;
+    
+    border:3px solid red;
+    float:left;
+    margin:6px;
+    overflow: hidden;
+  }
+  form button{
+    background-color:#06e50a ;
+    color:#fff;
+    float:left;
+    font-size:1rem;
+    padding:4px;
+    cursor: pointer;
+    
+    width: 15%;
+    border:none;
+    margin-right:1%;
+  }
+  
+  form button:hover{
+    background-color: orange;
+  }
+  .edit{
+    background-color: #4f6ee8;
+    border:none;
+    color:white;
+    padding:8px;
+  }
+  .del{
+    background-color: #06e50a;
+    border:none;
+    color:white;
+    padding:8px;
+    margin-right:8px;
+    font-family:sans-serif;
+  }
+  .edit:hover{
+    background-color:orange ;
+  }
+  .del:hover{
+    background-color:orange ;
+  }
+  
