@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top cls navbar-dark bg-dark" id="navuup">
+        <a class="navbar-brand" href="#"><img src="https://img.freepik.com/premium-vector/restaurant-icon-concept-with-icon-design_24911-17835.jpg?w=2000" class="logo" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link one" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link one" href="#nonVeg" onclick="overAlMenu()">Explore Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link one" href="#whychooseus-section">Why Choose Us ?</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link one" href="#delivery-seection">Delivery And Payment</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link one" href="#followus-section">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link one" href="reser.html">Reservation</a>
+              </li>
+          </ul>
+        </div>
+       
+      </nav>
+      <!-- courosal-start -->
+      <center>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <div class="ug-image d-flex flex-column justify-content-center" id="Home-section">
+                    <div>
+                    <h1 class="heading">Get Delicious Food Anytime</h1>
+                    <p class="para">View Non-veg items</p>
+                    <a href="#nonVeg" ><button class="button btn btn-success" style="width:25%;" id="nonvegbtn" >View Menu</button></a>
+                  </div>
+                </div>
+                  </div>
+          <div class="carousel-item ">
+            <div class="lg-image d-flex flex-column justify-content-center" id="Home-section">
+                <div>
+                <h1 class="heading">Get Delicious Food Anytime</h1>
+                <p class="para">View Veg items</p>
+                <a href="#veg"><button class="button btn btn-primary" style="width:25%" id="vegbtn">View Menu</button></a>
+              </div>
+            </div>
+             </div>
+          
+          <div class="carousel-item">
+            <div class="ig-image d-flex flex-column justify-content-center" id="Home-section">
+                <div>
+                <h1 class="heading">Get Delicious Food Anytime</h1>
+                <p class="para" style="color:black;">View salads & Ice-creams</p>
+                <a href="#salads"><button class="button btn btn-primary" style="width:25%" id="saladbtn">View Menu</button></a>
+              </div>
+            </div>
+        </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div></center>
+      <!-- courosal-end -->
+
+
+    
+
+
+
+<div >
+    <button id="rembtn" style="display: none;margin-top: 20px;" onclick="removemenu()" class="btn btn-primary">remove-items</button>
+</div> 
+      <!--menu-->
+     
+    <div class="container" >
+        <div class="cont1" id="nonVeg">
+        <h1 style="text-align:center ;color:blue;">Non-Veg items</h1>
+      <table class="table-scroll small-first-col table table-hover ">
+        <thead class="thead-dark bg-primary">
+          <tr>
+            <th >Num</th>
+            <th >Item</th>
+            <th>Cost(in Rs.)</th>
+          </tr>
+        </thead>
+        <tbody class="body-half-screen">
+          <tr>
+            <td >1</td>
+                <td>Chicken Birayani</td>
+                <td>200</td>
+          </tr>
+          <tr>
+            <td >2</td>
+            <td>Mutton Birayani</td>
+            <td>400</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Chicken Lollipop</td>
+            <td>150</td>
+          </tr>
+          <tr>
+            <td >4</td>
+            <td>squid</td>
+            <td>300</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>chicken 65</td>
+            <td>300</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Butter chicken</td>
+            <td>300</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Tandoori chicken</td>
+            <td>300</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Machher chicken</td>
+            <td>300</td>
+          </tr>
+        
+          
+        </tbody>
+      </table>
+         </div></div>
+
+    <!--veg-->
+    <div class="container" >
+        <div class="cont1" id="veg">
+        <h1 style="text-align:center ;color:blue;">Veg items</h1>
+      <table class="table-scroll small-first-col table table-hover ">
+        <thead class="thead-dark bg-primary">
+          <tr>
+            <th >Num</th>
+            <th >Item</th>
+            <th>Cost(in Rs.)</th>
+          </tr>
+        </thead>
+        <tbody class="body-half-screen">
+          <tr>
+            <td >1</td>
+                <td>Veg Birayani</td>
+                <td>200</td>
+          </tr>
+          <tr>
+            <td >2</td>
+            <td>Mushroom Birayani</td>
+            <td>320</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Daal baati churma</td>
+            <td>400</td>
+          </tr>
+          <tr>
+            <td >4</td>
+            <td>Masala panner</td>
+            <td>120</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Palak paneer</td>
+            <td>100</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Butter roti</td>
+            <td>70</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Veg Combo</td>
+            <td>500</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Bhaji</td>
+            <td>50</td>
+          </tr>
+        
+          
+        </tbody>
+      </table>
+         </div></div>
+    
+         <!--salad-->
+         <div class="container" >
+            <div class="cont1" id="salads">
+            <h1 style="text-align:center ;color:blue;">Salads & Ice-creams</h1>
+          <table class="table-scroll small-first-col table table-hover ">
+            <thead class="thead-dark bg-primary">
+              <tr>
+                <th >Num</th>
+                <th >Item</th>
+                <th>Cost(in Rs.)</th>
+              </tr>
+            </thead>
+            <tbody class="body-half-screen">
+                <tr>
+                    <td>1</td>
+                    <td>fruit Salad</td>
+                    <td>200</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>vanila</td>
+                    <td>400</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Chocolate</td>
+                    <td>150</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>straw-berry</td>
+                    <td>300</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>kulfi</td>
+                    <td>300</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>casata</td>
+                    <td>300</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Mango mix</td>
+                    <td>300</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>ice blush</td>
+                    <td>300</td>
+                  </tr> 
+                  
+                  
+              
+            </tbody>
+          </table>
+             </div></div>
+
+             <!-- why -->
+             <div class="bg-second pt-5 pb-5" id="whychooseus-section" style="background-color: rgb(247, 250, 103);">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-12">
+                    <h1>Why Choose Us?</h1>
+                    <p>
+                      We use both original recipes and classic versions of famous food
+                      items.
+                    </p>
+                  </div><br><br><br>
+                  <div class="col-12 col-md-4">
+                    <div class="whychoose-cards p-3 mb-3">
+                      <img
+                        src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/food-serve.png"
+                        class="food-image"
+                      />
+                      <h1 class="mt-3">Food Service</h1>
+                      <p>
+                        Experience fine dining at the comfort of your home. All our orders are carefully packed and arranged to give you the nothing less than perfect.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4">
+                      <div class="whychoose-cards p-3 mb-3">
+                        <img
+                          src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/fruits-img.png"
+                          class="food-image"
+                        />
+                        <h1 class="mt-3">Fresh Food</h1>
+                        <p>
+                          The Fresh Food group provides fresh-cut fruits and vegetables
+                          directly picked from our partner farms and farm houses so that
+                          you always get them tree to plate.
+                        </p>
+                      </div>
+                    </div>
+                  
+                  <div class="col-12 col-md-4">
+                    <div class="whychoose-cards p-3 mb-3">
+                      <img
+                        src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/offers-img.png"
+                        class="food-image"
+                      />
+                      <h1 class="mt-3">Best Offers</h1>
+                      <p>
+                        Food Coupons & Offers upto
+                        <span class="offers">50% OFF</span>
+                        and Exclusive Promo Codes on All Online Food Orders.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+             <!-- why -->
+
+             
+             <!--del-->
+             <div class="container" id="delivery-seection">
+              <div class="row">
+                <div class="col-12 m-3 p-3">
+                  <div class="offer-card">
+                  <img src="https://i.pinimg.com/736x/07/9a/47/079a47da7cb81d5ec6653b6574b810ba.jpg" class="offer-img" alt="">
+                  <h1>Delivery And Payment</h1>
+                  <p>Enjoy hassle-free payment with the plenitude of payment options available for you. Get live tracking 
+                    and locate your food on a live map. It's quite a sight to see your food arrive to your door. Plus, you 
+                    get a 5% discount on every order every time you pay online.</p>
+                    <a href="#Explore-Menu-Section"><button class="ordernow-button">Order Now</button></a>
+                    <div class="payment-card d-flex flex-row">
+                    <img src="https://digital.hbs.edu/platform-digit/wp-content/uploads/sites/2/2020/02/visa-logo-png-2026-1.png" alt="">&nbsp;
+                    <img src="https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_960_720.png" alt="">&nbsp;
+                    <img src="https://d28wu8o6itv89t.cloudfront.net/images/amexlogopng-1578907833580.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+             <!--end-->
+             <div class="container" id="followus-section">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="d-flex flex-row justify-content-center">
+                      <div class="followus-icons">
+                        <a href="https://twitter.com/priyatham14114"><i class="fab fa-twitter icons"></i></a>
+                      </div>
+                      <div class="followus-icons">
+                        <a href="https://www.instagram.com/priyathamsubhash/"><i class="fab fa-instagram icons"></i></a>
+                      </div>
+                      <div class="followus-icons">
+                        <a href="https://www.facebook.com/subburock.pydikondala/"><i class="fab fa-facebook icons"></i></a>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              </div>
+              <div class="container"> 
+                <div class="row">
+                  <div class="col-12">
+                    <div class="contact-us">
+                    <a href="#Home-section"><img src="https://img.freepik.com/premium-vector/restaurant-icon-concept-with-icon-design_24911-17835.jpg?w=2000" class="logo"alt=""></a>
+                    <p>orderfoodmunch@gmail.com</p>
+                    <p>1-220,jkpur,kakinada.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+<script src="script1.js"></script>
+
+    <!--menu-->
+</body>
+</html>
