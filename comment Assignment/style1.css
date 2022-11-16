@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+
+:root {
+    --white: #fff;
+    --black: #1c2b2d;
+    --blue: #31326f;
+    --color-primary: #9d0191;
+    --color-sec: #db6400;
+    --color-grey: #eee;
+    --color-dark-grey: #222831;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(117, 32, 235);
+}
+
+/* UTILITY */
+
+
+
+
+form button:hover {
+    background-color: var(--color-primary);
+}
+
+.note {
+    padding: 0.8rem;
+    /* border: 1px solid #777; */
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    margin-left:10%;
+    border:none;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.note-counter,
+.note-text {
+    font-size: 1.2rem;
+}
+.note-title {
+    font-size: 1.5rem;
+    color: rgb(4, 241, 75);
+    font-family:Arial, Helvetica, sans-serif;
+}
+.note-text{
+    color:#701c7bc8;
+}
+.cl{
+    max-width:40%;
+}
+
+
+
+.note-btn {
+    padding: 7px;
+    margin-top: 5px;
+    font-size: 1rem;
+    background-color: orangered;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: var(--color-primary);
+}
